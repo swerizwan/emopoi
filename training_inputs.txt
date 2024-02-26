@@ -1,0 +1,1 @@
+python training.py --output_graph=emopoi/emopoi_retrained_graph.pb --output_labels=emopoi/emopoi_retrained_labels.txt --architecture=emopoi/MobileNet_1.0_224 --image_dir=FER2013
