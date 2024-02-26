@@ -1,0 +1,15 @@
+# pickle files
+FER_X.pkl
+FER_y.pkl
+RAFDB_X.pkl
+RAFDB_y.pkl
+
+# pycache
+__pycache__/
+
+# models    
+RAFDB_model.h5
+FER_model.h5
+
+#virtualenv
+venv/
