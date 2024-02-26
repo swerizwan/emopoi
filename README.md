@@ -27,10 +27,11 @@ EmoPOI: EmoPOI dataset will be available upon request for research purpose after
 # Step to Run the demo
 
 1.	Download this repository.
-2.	Create an 'Images' folder in your project and make subfolders for emotions such as Happy, Worried, Sad, Excited, Exhausted, Frustrated, Bored, and Neutral.
-3.	Utilize the 'video_frames.py' file to convert your own or any live video into frames of images, thereby generating a large dataset.
-4.	Place the 'image_augmentation.py' and 'emopoi_frontalface_alt.xml' files in each type of image folder. For example, place these files in the "happy" image folder and execute the program. It will detect faces from images, convert them into grayscale, and create new images in the same folder.
-5.	Next, create the model. You can copy the code from the 'training_inputs.txt' file, open the terminal in your project folder, paste the code, and hit enter.
-6.	Training the model will take approximately 20-25 minutes to complete. Use a large number of datasets for optimal accuracy. 
-7.	Upon training completion, two files named 'emopoi_retrained_graph.pb' and 'emopoi_retrained_labels.txt' will be generated.
-8.	Finally, run 'emotion_age_gender_recognition.py' (provide the proper path to your video). Based on the recognized emotion, gender, and age group, you will receive personalized POI recommendations suited to the user's preferences.
+2.	Download the emopoi_files folder from the link https://drive.google.com/drive/folders/13aIqYTp4tY5NiusXMcKxyNWiWDp80irP?usp=sharing and put it in the root directory.
+3.	Create an 'Images' folder in your project and make subfolders for emotions such as Happy, Worried, Sad, Excited, Exhausted, Frustrated, Bored, and Neutral.
+4.	Utilize the 'video_frames.py' file to convert your own or any live video into frames of images, thereby generating a large dataset.
+5.	Place the 'image_augmentation.py' and 'emopoi_frontalface_alt.xml' files in each type of image folder. For example, place these files in the "happy" image folder and execute the program. It will detect faces from images, convert them into grayscale, and create new images in the same folder.
+6.	Next, create the model. You can copy the code from the 'training_inputs.txt' file, open the terminal in your project folder, paste the code, and hit enter.
+7.	Training the model will take approximately 20-25 minutes to complete. Use a large number of datasets for optimal accuracy. 
+8.	Upon training completion, two files named 'emopoi_retrained_graph.pb' and 'emopoi_retrained_labels.txt' will be generated.
+9.	Finally, run 'emotion_age_gender_recognition.py' (provide the proper path to your video). Based on the recognized emotion, gender, and age group, you will receive personalized POI recommendations suited to the user's preferences.
