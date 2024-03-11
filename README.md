@@ -22,7 +22,7 @@ Option 2: If you're using PyCharm IDE, you can install the Dlib library directly
 
 # Datasets
 FER-2013: You can download the FER2013 dataset from the link https://www.kaggle.com/datasets/msambare/fer2013
-EmoPOI: EmoPOI dataset will be available upon request for research purpose after the paper will get accepted. 
+EmoPOI: EmoPOI dataset samples are available at https://drive.google.com/file/d/1TtJNkrWSFkIMW72-xnpBuRD7LTuxSEal/view?usp=sharing. The complete EmoPOI dataset will be available upon request for research purposes after the paper is accepted. 
 
 # Step to Run the demo
 
