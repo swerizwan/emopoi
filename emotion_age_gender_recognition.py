@@ -9,6 +9,7 @@ import pygame
 import time
 import threading
 
+
 # Suppress TensorFlow informational messages
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
