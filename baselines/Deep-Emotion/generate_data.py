@@ -5,7 +5,6 @@ from PIL import Image
 import os
 from tqdm import tqdm
 
-
 class Generate_data():
     def __init__(self, datapath):
         """
