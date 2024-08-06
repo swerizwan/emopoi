@@ -1,6 +1,7 @@
 # EmoPOI: Emotion-Based Point of Interest Recommendation
 
 # About Project
+
 This research highlights the significance of understanding users' emotional states to enhance the user experience in recommendation applications, particularly in Point of Interest (POI) recommendations. Previous studies have overlooked emotions and lacked comprehensive datasets. In response, we propose an EmoPOI dataset and a novel approach that integrates facial feature extraction using Convolutional Neural Networks (CNNs) and emotion analysis through Long Short-Term Memory (LSTM) layers. Our method excels in accuracy compared to state-of-the-art techniques, leveraging FER-2013 and EmoPOI datasets.
 
 # Workflow
