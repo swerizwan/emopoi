@@ -1,6 +1,7 @@
 import cv2
 import os
 
+
 # Add the path to the Graphviz binary to the system environment variable
 os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/graphviz-2.38/release/bin/'
 
