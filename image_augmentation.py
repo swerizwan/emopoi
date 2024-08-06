@@ -1,6 +1,5 @@
 import cv2
 import glob
-
 # Fetch a list of all PNG images in the current directory
 images = glob.glob("*.png")
 
