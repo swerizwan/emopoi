@@ -1,8 +1,16 @@
-# EmoPOI: Emotion-Based Point of Interest Recommendation
+# Emotion-Aware POI Recommendations via Facial Expression Analysis in Videos
 
-# About Project
+<img src="https://camo.githubusercontent.com/2722992d519a722218f896d5f5231d49f337aaff4514e78bd59ac935334e916a/68747470733a2f2f692e696d6775722e636f6d2f77617856496d762e706e67" alt="Oryx Video-ChatGPT" data-canonical-src="https://i.imgur.com/waxVImv.png" style="max-width: 100%;">
 
-This research highlights the significance of understanding users' emotional states to enhance the user experience in recommendation applications, particularly in Point of Interest (POI) recommendations. Previous studies have overlooked emotions and lacked comprehensive datasets. In response, we propose an EmoPOI dataset and a novel approach that integrates facial feature extraction using Convolutional Neural Networks (CNNs) and emotion analysis through Long Short-Term Memory (LSTM) layers. Our method excels in accuracy compared to state-of-the-art techniques, leveraging FER-2013 and EmoPOI datasets.
+# Overview
+
+This paper presents EmoPOI, a framework for real-time personalized POI recommendations based on emotion recognition from facial expressions in videos. It utilizes CNNs and LSTM to classify emotions, considering gender and age, and surpasses current benchmarks. The hybrid model improves user experience and advances emotion-based recommender systems. The EmoPOI dataset supports the framework's robustness and applicability.
+
+# 👁️💬 Architecture
+
+The methodology for personalized POI recommendations using emotion recognition. The model combines CNN and LSTM layers. The CNN, using MobileNet, extracts facial features from video frames. These features are fed into LSTM layers to analyze emotional changes over time. The model also uses tensor construction for organizing data and tensor train layers for processing high-dimensional data efficiently. Dense layers are included to enhance pattern recognition in emotional features.
+
+<img style="max-width: 100%;" src="https://github.com/swerizwan/emopoi/blob/main/resources/architecture.png" alt="EMOPOI Overview">
 
 # Workflow
 
