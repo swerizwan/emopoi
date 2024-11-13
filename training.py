@@ -827,6 +827,48 @@ def time_distributed_netlivestreaming(input_image_s, network_id=""):
     """
     return TimeDistributed(netlivestreaming(Input(input_image_s), network_id))
 
+import tensorflow as tf
+
+def cross_modal_attention(features, feature_dim, attention_dim):
+    """
+    Applies cross-modal attention on input features in TensorFlow.
+    
+    Args:
+        features: Tensor of shape (batch_size, num_modalities, feature_dim)
+        feature_dim: The dimension of each modality's feature vector
+        attention_dim: The dimension of the attention layer
+    
+    Returns:
+        output: Attended and transformed features of shape (batch_size, feature_dim)
+        attention_weights: Attention weights of shape (batch_size, num_modalities, num_modalities)
+    """
+    
+    # Define the learnable linear layers for query, key, and value projections
+    query_layer = tf.keras.layers.Dense(attention_dim, use_bias=False)
+    key_layer = tf.keras.layers.Dense(attention_dim, use_bias=False)
+    value_layer = tf.keras.layers.Dense(attention_dim, use_bias=False)
+    output_layer = tf.keras.layers.Dense(feature_dim, use_bias=False)
+
+    # Apply linear transformations to get queries, keys, and values
+    queries = query_layer(features)  # Shape: (batch_size, num_modalities, attention_dim)
+    keys = key_layer(features)       # Shape: (batch_size, num_modalities, attention_dim)
+    values = value_layer(features)   # Shape: (batch_size, num_modalities, attention_dim)
+
+    # Calculate attention scores
+    attention_scores = tf.matmul(queries, keys, transpose_b=True)  # Shape: (batch_size, num_modalities, num_modalities)
+    attention_weights = tf.nn.softmax(attention_scores, axis=-1)   # Normalize across modalities
+
+    # Calculate attended values
+    attended_values = tf.matmul(attention_weights, values)         # Shape: (batch_size, num_modalities, attention_dim)
+
+    # Summarize attended features across modalities
+    attended_features = tf.reduce_sum(attended_values, axis=1)     # Shape: (batch_size, attention_dim)
+
+    # Project back to feature dimension
+    output = output_layer(attended_features)                       # Shape: (batch_size, feature_dim)
+    
+    return output, attention_weights
+
 
 def tt_fusion_model(time_steps, flag_model):
     """
@@ -855,6 +897,8 @@ def tt_fusion_model(time_steps, flag_model):
     features_video = Dropout(0.2)(features_video)
     features_video = LSTM(128, return_sequences=True)(features_video)
     features_video = LSTM(128, return_sequences=False)(features_video)
+    attention_layer = CrossModalAttention(feature_dim=128, attention_dim=64)
+    attended_output, attention_weights = attention_layer(features_video)
 
     reshape_1 = Reshape((1, 129))(Concatenate()([bias, features_face]))
     reshape_2 = Reshape((1, 129))(Concatenate()([bias, features_video]))
