@@ -1,14 +1,14 @@
-# Emotion-Aware POI Recommendations via Facial Expression Analysis in Videos
+# EmotionViA: Emotion Recognition from Videos via Attention-Enhanced CNN-LSTM Architecture
 
 <img src="https://camo.githubusercontent.com/2722992d519a722218f896d5f5231d49f337aaff4514e78bd59ac935334e916a/68747470733a2f2f692e696d6775722e636f6d2f77617856496d762e706e67" alt="Oryx Video-ChatGPT" data-canonical-src="https://i.imgur.com/waxVImv.png" style="max-width: 100%;">
 
 # Overview
 
-This paper presents EmoPOI, a framework for real-time personalized POI recommendations based on emotion recognition from facial expressions in videos. It utilizes CNNs and LSTM to classify emotions, considering gender and age, and surpasses current benchmarks. The hybrid model improves user experience and advances emotion-based recommender systems. The EmoPOI dataset supports the framework's robustness and applicability.
+This paper presents EmotionViA, a real-time framework for recognizing emotions from facial expressions in videos. It combines CNNs for spatial feature extraction, LSTMs for capturing temporal dynamics, and an attention mechanism to integrate these features effectively. The EmotionViA dataset, featuring diverse emotional expressions, enhances the framework's performance and adaptability. Experiments on EmotionViA, FER-2013, AffectNet, and RAF-DB datasets show that it surpasses state-of-the-art methods. EmotionViA has wide applications in fields like education, healthcare, entertainment, and marketing, improving user experiences.
 
 # 👁️💬 Architecture
 
-The methodology for personalized POI recommendations using emotion recognition. The model combines CNN and LSTM layers. The CNN, using MobileNet, extracts facial features from video frames. These features are fed into LSTM layers to analyze emotional changes over time. The model also uses tensor construction for organizing data and tensor train layers for processing high-dimensional data efficiently. Dense layers are included to enhance pattern recognition in emotional features.
+This section outlines the methodology for facial emotion recognition from videos, integrating CNNs, LSTMs, and an attention mechanism for enhanced performance. CNNs extract key facial features from video frames, while LSTMs capture temporal dependencies to track evolving emotions. An intra-modal attention mechanism highlights relevant facial cues, supported by tensor construction, tensor train layers for efficient high-dimensional processing, and dense layers for pattern refinement. This approach ensures accurate recognition by focusing on expressive facial regions like the eyes, nose, and mouth.
 
 <img style="max-width: 100%;" src="https://github.com/swerizwan/emopoi/blob/main/resources/architecture.png" alt="EMOPOI Overview">
 
@@ -49,6 +49,10 @@ To get started, ensure you have the necessary libraries installed:
 - **FER-2013:** You can download the FER2013 dataset from [here](https://www.kaggle.com/datasets/msambare/fer2013).
 
 - **EmoPOI:** EmoPOI dataset samples are available [here](https://drive.google.com/file/d/1TtJNkrWSFkIMW72-xnpBuRD7LTuxSEal/view?usp=sharing). The complete EmoPOI dataset will be available upon request for research purposes after the paper is accepted.
+
+- **AffectNet:** You can download the AffectNet dataset from [here](http://mohammadmahoor.com/affectnet/).
+
+- **RAF-DB:** You can download the RAF-DB dataset from [here](https://www.kaggle.com/datasets/shuvoalok/raf-db-dataset).
 
 # Steps to Run the Demo
 
